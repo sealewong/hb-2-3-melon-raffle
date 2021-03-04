@@ -1,6 +1,6 @@
 """Read customer data from file and run a raffle."""
 
-from random import choice
+import random 
 
 
 class Customer(object):
@@ -12,7 +12,7 @@ class Customer(object):
         self.street = street
         self.city = city
         self.zipcode = zipcode
-
+    
 
 def get_customers_from_file(customer_file_path):
     """Read customer file and return list of customer objects.
@@ -55,3 +55,7 @@ def run_raffle():
 
     customers = get_customers_from_file("customers.txt")
     pick_winner(customers)
+
+
+if __name__ == "__main__":
+    run_raffle()
